@@ -1098,7 +1098,7 @@ BEGIN
     INNER JOIN [MONSTERS_INC].Ticket t ON m.TICKET_NUMERO = t.tick_nro
     INNER JOIN [MONSTERS_INC].Pago p ON tick_id = p.pago_ticket AND p.pago_fecha = m.PAGO_FECHA
     LEFT JOIN [MONSTERS_INC].Descuento_Medio_Pago d ON m.DESCUENTO_DESCRIPCION = d.desc_descripcion 
-        AND m.DESCUENTO_FECHA_FIN = d.desc_fecha_fin and m.DESCUENTO_FECHA_INICIO = d.desc_fecha_inicio and m.DESCUENTO_PORCENTAJE_DESC = d.desc_porcentaje
+        AND m.DESCUENTO_FECHA_FIN = d.desc_fecha_fin AND m.DESCUENTO_FECHA_INICIO = d.desc_fecha_inicio AND m.DESCUENTO_PORCENTAJE_DESC = d.desc_porcentaje
     WHERE m.DESCUENTO_DESCRIPCION IS NOT NULL
 END
 GO
